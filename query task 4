@@ -1,0 +1,9 @@
+SELECT 
+	book_name  ,
+	CONCAT(first_name, " ", last_name) AS author_name,
+	publish_date
+FROM 
+	books inner join authors on authors.id = books.author_id
+WHERE
+	publish_date LIKE "2021-01-%"
+
